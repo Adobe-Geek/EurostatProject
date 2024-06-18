@@ -23,6 +23,7 @@ def fetch_save_json(url, filename):
                     # save json to file
                     with open(filename, "w") as json_file:
                         json.dump(data, json_file, indent=4)
+                        print(f"fetching data please wait...")
                         print(f"successfully saved data from {url} to {filename}")
                 else:
                     print(f"unexpected data type prom {url}: {type(data)}")
